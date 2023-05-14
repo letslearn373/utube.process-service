@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTube.ProcessService.Api", "UTube.ProcessService.Api\UTube.ProcessService.Api.csproj", "{6ECBAFFC-7728-403E-A712-97EA5FA91D23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTube.ProcessService.Application", "UTube.ProcessService.Application\UTube.ProcessService.Application.csproj", "{46090D1A-5CFC-4006-87E1-C93EFC4A58A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTube.ProcessService.Infrastructure", "UTube.ProcessService.Infrastructure\UTube.ProcessService.Infrastructure.csproj", "{EC07A4A1-61E0-4CB7-BFF8-D24B96CF264F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6ECBAFFC-7728-403E-A712-97EA5FA91D23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ECBAFFC-7728-403E-A712-97EA5FA91D23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ECBAFFC-7728-403E-A712-97EA5FA91D23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ECBAFFC-7728-403E-A712-97EA5FA91D23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46090D1A-5CFC-4006-87E1-C93EFC4A58A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46090D1A-5CFC-4006-87E1-C93EFC4A58A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46090D1A-5CFC-4006-87E1-C93EFC4A58A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46090D1A-5CFC-4006-87E1-C93EFC4A58A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC07A4A1-61E0-4CB7-BFF8-D24B96CF264F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC07A4A1-61E0-4CB7-BFF8-D24B96CF264F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC07A4A1-61E0-4CB7-BFF8-D24B96CF264F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC07A4A1-61E0-4CB7-BFF8-D24B96CF264F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24C74AE8-9654-4478-86EE-4B7E2CA819DF}
+	EndGlobalSection
+EndGlobal
