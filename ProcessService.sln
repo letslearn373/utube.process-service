@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTube.ProcessService.Api", "UTube.ProcessService.Api\UTube.ProcessService.Api.csproj", "{6ECBAFFC-7728-403E-A712-97EA5FA91D23}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessService.Api", "ProcessService.Api\ProcessService.Api.csproj", "{6ECBAFFC-7728-403E-A712-97EA5FA91D23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTube.ProcessService.Application", "UTube.ProcessService.Application\UTube.ProcessService.Application.csproj", "{46090D1A-5CFC-4006-87E1-C93EFC4A58A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessService.Application", "ProcessService.Application\ProcessService.Application.csproj", "{46090D1A-5CFC-4006-87E1-C93EFC4A58A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTube.ProcessService.Infrastructure", "UTube.ProcessService.Infrastructure\UTube.ProcessService.Infrastructure.csproj", "{EC07A4A1-61E0-4CB7-BFF8-D24B96CF264F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessService.Infrastructure", "ProcessService.Infrastructure\ProcessService.Infrastructure.csproj", "{EC07A4A1-61E0-4CB7-BFF8-D24B96CF264F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

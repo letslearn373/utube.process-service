@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace UTube.ProcessService.Application.Events
+namespace ProcessService.Application.Events
 {
     public record ResizeVideoEvent(string videoId) : INotification;
 

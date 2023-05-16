@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UTube.ProcessService.Application\UTube.ProcessService.Application.csproj" />
-    <ProjectReference Include="..\UTube.ProcessService.Infrastructure\UTube.ProcessService.Infrastructure.csproj" />
+    <ProjectReference Include="..\ProcessService.Application\ProcessService.Application.csproj" />
+    <ProjectReference Include="..\ProcessService.Infrastructure\ProcessService.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

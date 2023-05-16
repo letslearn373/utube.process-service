@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UTube.ProcessService.Application\UTube.ProcessService.Application.csproj" />
+    <ProjectReference Include="..\ProcessService.Application\ProcessService.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>

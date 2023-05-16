@@ -1,5 +1,5 @@
-using UTube.ProcessService.Application;
-using UTube.ProcessService.Infrastructure;
+using ProcessService.Application;
+using ProcessService.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 {

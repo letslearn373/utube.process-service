@@ -2,11 +2,11 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics;
-using UTube.ProcessService.Application.Consumers;
-using UTube.ProcessService.Application.Events;
-using UTube.ProcessService.Infrastructure.Settings;
+using ProcessService.Application.Consumers;
+using ProcessService.Application.Events;
+using ProcessService.Infrastructure.Settings;
 
-namespace UTube.ProcessService.Infrastructure;
+namespace ProcessService.Infrastructure;
 
 public static class DependencyInjection
 {
