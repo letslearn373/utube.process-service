@@ -1,10 +1,10 @@
 ﻿using MediatR;
 using MimeTypes;
-using ProcessService.Application.Protos;
-using ProcessService.Application.Service;
-using static ProcessService.Application.Protos.GrpcFileService;
+using ProcessService.Worker.Protos;
+using ProcessService.Worker.Services;
+using static ProcessService.Worker.Protos.GrpcFileService;
 
-namespace ProcessService.Application.Events
+namespace ProcessService.Worker.Events
 {
     public record ProcessThumbnailEvent(string videoId, string videoPath) : INotification;
 

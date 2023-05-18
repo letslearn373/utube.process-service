@@ -1,6 +1,6 @@
 ﻿syntax = "proto3";
 import "google/protobuf/empty.proto";
-option csharp_namespace = "ProcessService.Application.Protos";
+option csharp_namespace = "ProcessService.Worker.Protos";
 
 service GrpcFileService {
     rpc UploadFile(stream  UploadFileRequest) returns (google.protobuf.Empty);

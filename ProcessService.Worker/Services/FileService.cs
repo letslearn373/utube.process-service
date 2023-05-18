@@ -1,7 +1,6 @@
 ﻿using Google.Protobuf;
-using ProcessService.Application.Service;
 
-namespace ProcessService.Infrastructure.Service
+namespace ProcessService.Worker.Services
 {
     public class FileService : IFileService
     {

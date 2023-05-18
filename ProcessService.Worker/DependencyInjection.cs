@@ -1,17 +1,20 @@
 ﻿using MassTransit;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using ProcessService.Application.Consumers;
-using ProcessService.Application.Service;
-using ProcessService.Infrastructure.Service;
-using ProcessService.Infrastructure.Settings;
+using ProcessService.Worker.Consumers;
+using ProcessService.Worker.Protos;
+using ProcessService.Worker.Services;
+using ProcessService.Worker.Settings;
 
-namespace ProcessService.Infrastructure;
+namespace ProcessService.Worker;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services, ConfigurationManager configuration)
+    public static IServiceCollection AddDependencies(this IServiceCollection services, ConfigurationManager configuration)
     {
+        services.AddMediatR(option =>
+        {
+            option.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly);
+        });
+
         #region MassTransit
 
         var rabbitMQSetting = new RabbitMQSetting();
@@ -37,10 +40,26 @@ public static class DependencyInjection
 
         #endregion
 
+        #region gRPC
+
+        var grpcFileServiceHost = configuration.GetSection("GrpcClients:StorageService").Value;
+
+        if (!string.IsNullOrEmpty(grpcFileServiceHost))
+        {
+            services.AddGrpcClient<GrpcFileService.GrpcFileServiceClient>(option =>
+            {
+                option.Address = new Uri(grpcFileServiceHost);
+            });
+        }
+
+        #endregion
+
         services.Configure<FFMpegSetting>(configuration.GetSection(nameof(FFMpegSetting)));
 
         services.AddTransient<IFFMpegService, FFMpegService>();
         services.AddTransient<IFileService, FileService>();
+
+
 
         return services;
     }
