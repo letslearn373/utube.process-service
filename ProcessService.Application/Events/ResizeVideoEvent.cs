@@ -8,7 +8,7 @@ namespace ProcessService.Application.Events
     {
         protected override void Handle(ProcessThumbnailEvent notification)
         {
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
     }
 }

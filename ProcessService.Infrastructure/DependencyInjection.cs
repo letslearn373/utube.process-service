@@ -1,9 +1,9 @@
 ﻿using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.Diagnostics;
 using ProcessService.Application.Consumers;
-using ProcessService.Application.Events;
+using ProcessService.Application.Service;
+using ProcessService.Infrastructure.Service;
 using ProcessService.Infrastructure.Settings;
 
 namespace ProcessService.Infrastructure;
@@ -36,6 +36,11 @@ public static class DependencyInjection
         });
 
         #endregion
+
+        services.Configure<FFMpegSetting>(configuration.GetSection(nameof(FFMpegSetting)));
+
+        services.AddTransient<IFFMpegService, FFMpegService>();
+        services.AddTransient<IFileService, FileService>();
 
         return services;
     }

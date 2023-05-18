@@ -16,8 +16,8 @@ namespace ProcessService.Application.Consumers
 
         public async Task Consume(ConsumeContext<VideoUploadedEvent> context)
         {
-            await _publisher.Publish(new ProcessThumbnailEvent(context.Message.videoId));
-            await _publisher.Publish(new ResizeVideoEvent(context.Message.videoId));
+            await _publisher.Publish(new ProcessThumbnailEvent(context.Message.videoId, context.Message.objectUrl), context.CancellationToken).ConfigureAwait(false);
+            await _publisher.Publish(new ResizeVideoEvent(context.Message.objectUrl));
         }
     }
 }
