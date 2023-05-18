@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace ProcessService.Application.Events
+namespace ProcessService.Worker.Events
 {
     public record ResizeVideoEvent(string videoId) : INotification;
 

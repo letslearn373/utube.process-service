@@ -1,4 +1,4 @@
-﻿namespace ProcessService.Application.Service;
+﻿namespace ProcessService.Worker.Services;
 
 public interface IFFMpegService
 {

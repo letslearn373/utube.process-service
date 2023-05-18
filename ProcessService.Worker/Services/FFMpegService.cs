@@ -1,9 +1,8 @@
 ﻿using Microsoft.Extensions.Options;
-using ProcessService.Application.Service;
-using ProcessService.Infrastructure.Settings;
+using ProcessService.Worker.Settings;
 using System.Diagnostics;
 
-namespace ProcessService.Infrastructure.Service;
+namespace ProcessService.Worker.Services;
 
 public class FFMpegService : IFFMpegService
 {

@@ -9,22 +9,20 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 
 WORKDIR /src
 
-COPY ["ProcessService.Api/ProcessService.Api.csproj", "ProcessService.Api/"]
-COPY ["ProcessService.Application/ProcessService.Application.csproj", "ProcessService.Application/"]
-COPY ["ProcessService.Infrastructure/ProcessService.Infrastructure.csproj", "ProcessService.Infrastructure/"]
+COPY ["ProcessService.Worker/ProcessService.Worker.csproj", "ProcessService.Worker/"]
 
 RUN --mount=type=secret,id=github_token \
     dotnet nuget add source --username abdurrahim373 --password $(cat /run/secrets/github_token) --store-password-in-clear-text --name github "https://nuget.pkg.github.com/letslearn373/index.json"
 
-RUN dotnet restore "ProcessService.Api/ProcessService.Api.csproj"
+RUN dotnet restore "ProcessService.Worker/ProcessService.Worker.csproj"
 COPY . .
-WORKDIR "/src/ProcessService.Api"
-RUN dotnet build "ProcessService.Api.csproj" -c Release -o /app/build
+WORKDIR "/src/ProcessService.Worker"
+RUN dotnet build "ProcessService.Worker.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "ProcessService.Api.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "ProcessService.Worker.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ProcessService.Api.dll"]
+ENTRYPOINT ["dotnet", "ProcessService.Worker.dll"]

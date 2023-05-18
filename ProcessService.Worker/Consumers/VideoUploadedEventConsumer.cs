@@ -1,9 +1,9 @@
 ﻿using MassTransit;
 using MediatR;
+using ProcessService.Worker.Events;
 using UTube.Common.Events;
-using ProcessService.Application.Events;
 
-namespace ProcessService.Application.Consumers
+namespace ProcessService.Worker.Consumers
 {
     public class VideoUploadedEventConsumer : IConsumer<VideoUploadedEvent>
     {

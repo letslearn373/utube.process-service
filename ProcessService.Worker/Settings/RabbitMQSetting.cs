@@ -1,4 +1,4 @@
-﻿namespace ProcessService.Infrastructure.Settings;
+﻿namespace ProcessService.Worker.Settings;
 
 public class RabbitMQSetting
 {
